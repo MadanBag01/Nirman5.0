@@ -1,0 +1,4209 @@
+/* Dashboard Card Base Styles */
+.dashboard-card {
+  background: var(--bg-card);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+}
+
+.card-title h1 {
+  font-size: 3.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.card-content h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-content li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.card-content li:last-child {
+  border-bottom: none;
+}
+
+/* Crop Planner Card Specific Styles */
+
+/* Internal Cards Navigation */
+.internal-cards-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.internal-card-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.internal-card-nav:hover {
+  border-color: var(--card-color);
+  color: var(--card-color);
+  transform: translateY(-2px);
+}
+
+.internal-card-nav.active {
+  border-color: var(--card-color);
+  background: var(--card-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+}
+
+/* Internal Card Container */
+.internal-card-container {
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.internal-card-content {
+  padding: 1.5rem;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.form-group input::placeholder {
+  color: var(--text-light);
+}
+
+/* Result Section */
+.result-section {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  color: white;
+  text-align: center;
+}
+
+.result-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.result-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.result-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.result-unit {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.summary-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.summary-button {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 1rem 2.25rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(16, 185, 129, 0.25);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.summary-button.accent {
+  background: var(--accent-blue);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
+}
+
+.summary-button.warning {
+  background: var(--accent-yellow);
+  color: var(--text-primary);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+}
+
+.summary-button.neutral {
+  background: var(--accent-purple);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.25);
+}
+
+.summary-button:hover {
+  box-shadow: 0 16px 32px rgba(16, 185, 129, 0.35);
+  transform: translateY(-2px);
+}
+
+.summary-button[disabled],
+.summary-button[data-loading="true"] {
+  opacity: 0.85;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
+}
+
+.summary-button[data-loading="true"]::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  animation: summary-spin 0.7s linear infinite;
+}
+
+.planner-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 999;
+}
+
+.planner-modal {
+  background: var(--bg-card);
+  border-radius: 1rem;
+  width: min(700px, 100%);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.2s ease;
+}
+
+.modal-close:hover {
+  opacity: 0.8;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.modal-field {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.field-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.modal-result {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+  padding: 1.5rem;
+  border-radius: 0.85rem;
+  color: white;
+  text-align: center;
+}
+
+.modal-result .result-label {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.modal-result .result-value {
+  margin: 0.35rem 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@keyframes summary-spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Future Placeholder */
+.future-placeholder {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  color: var(--accent-purple);
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.future-placeholder h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.future-placeholder p {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.placeholder-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.feature-item {
+  background: var(--bg-card);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .internal-cards-nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .internal-card-nav {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .nav-icon {
+    font-size: 1rem;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .result-value {
+    font-size: 2rem;
+  }
+  
+  .placeholder-features {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-modal {
+    width: 100%;
+  }
+}
+
+
+
+.form-section {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.form-section h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.form-group input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Map Preview Styles */
+.map-preview {
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.map-placeholder {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.map-icon {
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.map-placeholder p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.analyze-button {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.analyze-button:hover:not(:disabled) {
+  background: var(--primary-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.analyze-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error Message */
+.error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.error-message p {
+  margin: 0;
+  color: #dc2626;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Analysis Details */
+.analysis-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.detail-icon {
+  color: var(--primary-green);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.refresh-button,
+.new-analysis-button {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.refresh-button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.refresh-button:hover {
+  background: var(--primary-green);
+  color: white;
+  border-color: var(--primary-green);
+}
+
+.new-analysis-button {
+  background: var(--primary-green);
+  color: white;
+}
+
+.new-analysis-button:hover {
+  background: var(--primary-green-dark);
+  transform: translateY(-1px);
+}
+
+/* Loading Details */
+.analysis-details {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--bg-secondary);
+  border-radius: 0.5rem;
+}
+
+/* Integrated TTS Button in Navigation */
+.internal-card-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.nav-title {
+  flex: 1;
+  text-align: left;
+}
+
+.integrated-tts-button {
+  background: rgba(87, 199, 133, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(87, 199, 133, 0.3);
+  transition: all 0.3s ease;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.integrated-tts-button:hover {
+  background: #57C785;
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(87, 199, 133, 0.5);
+  opacity: 1;
+}
+
+.integrated-tts-button:active {
+  transform: scale(0.9);
+}
+
+
+.location-icon {
+  color: var(--primary-green);
+  font-size: 0.9rem;
+}
+
+.ndvi-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ndvi-indicator {
+  position: relative;
+}
+
+.ndvi-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ndvi-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ndvi-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ndvi-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.ndvi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.health-percentage,
+.stress-areas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.percentage-number,
+.stress-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.percentage-label,
+.stress-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.health-message {
+  background: var(--secondary-green);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-green);
+}
+
+.health-message p {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.recommendations h4 {
+  margin-bottom: 0.75rem;
+}
+
+/* Soil Data Display */
+.soil-data {
+  margin-bottom: 1.5rem;
+}
+
+.soil-data h4 {
+  margin-bottom: 1rem;
+}
+
+.soil-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.soil-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Loading and Error States */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.loading-spinner {
+  font-size: 2rem;
+  color: var(--primary-green);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.retry-button {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retry-button:hover {
+  background: var(--primary-green-dark);
+  transform: translateY(-1px);
+}
+
+/* Refresh Section */
+.refresh-section {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.refresh-button {
+  width: 100%;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.refresh-button:hover {
+  background: var(--primary-green);
+  color: white;
+  border-color: var(--primary-green);
+}
+
+/* Soil Testing Card Specific Styles */
+.npk-section {
+  margin-bottom: 1.5rem;
+}
+
+.npk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nutrient-item {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+}
+
+.nutrient-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.nutrient-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.nutrient-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.soil-properties {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.property-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+}
+
+.property-icon {
+  font-size: 1.25rem;
+  color: var(--primary-green);
+}
+
+.property-info {
+  flex: 1;
+}
+
+.property-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.property-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.property-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Weather Card Specific Styles */
+.location-info {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.current-weather {
+  margin-bottom: 1.5rem;
+}
+
+.current-main {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.current-icon {
+  font-size: 3rem;
+  color: var(--accent-yellow);
+}
+
+.current-details {
+  flex: 1;
+}
+
+.current-temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.current-condition {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.current-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.weather-forecast {
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.75rem;
+}
+
+.forecast-day {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+}
+
+.forecast-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.forecast-day-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.alert-icon {
+  color: var(--accent-red);
+  font-size: 0.9rem;
+}
+
+.forecast-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-icon.sunny { color: var(--accent-yellow); }
+.weather-icon.partly-cloudy { color: var(--accent-blue); }
+.weather-icon.cloudy { color: var(--text-secondary); }
+.weather-icon.rainy { color: var(--accent-blue); }
+.weather-icon.thunderstorm { color: #ff6b35; animation: lightning 2s infinite; }
+
+@keyframes lightning {
+  0%, 90%, 100% { opacity: 1; }
+  95% { opacity: 0.3; }
+}
+
+.thunderstorm-icon {
+  color: #ff6b35;
+  font-size: 0.9rem;
+  animation: lightning 2s infinite;
+}
+
+.rain-icon {
+  color: var(--accent-blue);
+  font-size: 0.9rem;
+}
+
+.rain-chance {
+  font-size: 0.75rem;
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.forecast-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.humidity-info {
+  font-size: 0.7rem;
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rain-status {
+  font-size: 0.7rem;
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+.forecast-day.selected {
+  background: var(--secondary-green);
+  border: 2px solid var(--primary-green);
+  transform: scale(1.05);
+}
+
+.forecast-day {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.forecast-day:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Day Details Section */
+.day-details {
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.day-details h4 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.detail-icon {
+  font-size: 1.25rem;
+  color: var(--primary-green);
+  flex-shrink: 0;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rain-times {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.rain-times h5 {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.time-slot {
+  background: var(--accent-blue);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Rain Alert Styles */
+.rain-alert {
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  border: 1px solid #90caf9;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.rain-alert h4 {
+  color: #1976d2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rain-item {
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  border-left-color: #2196f3;
+}
+
+.rain-item .alert-icon-small {
+  color: #2196f3;
+}
+
+.thunderstorm-alert {
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  border: 1px solid #ffeaa7;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.thunderstorm-alert h4 {
+  color: #856404;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.thunderstorm-item {
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  border-left-color: #ff6b35;
+}
+
+.thunderstorm-item .alert-icon-small {
+  color: #ff6b35;
+}
+
+/* Thunderstorm Popup Styles */
+.thunderstorm-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.thunderstorm-popup {
+  background: white;
+  border-radius: 1rem;
+  padding: 0;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.popup-header {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.popup-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.popup-icon {
+  font-size: 1.5rem;
+  animation: lightning 2s infinite;
+}
+
+.popup-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.popup-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.popup-content {
+  padding: 1.5rem;
+}
+
+.popup-content p {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.alert-details {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alert-details p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #856404;
+}
+
+.alert-details p:last-child {
+  margin-bottom: 0;
+}
+
+.weather-summary {
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.weather-summary p {
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.weather-summary ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.weather-summary li {
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.weather-summary li:last-child {
+  margin-bottom: 0;
+}
+
+/* Loading and Error States for Weather */
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--primary-green);
+  font-size: 1rem;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--accent-red);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.forecast-temps {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-high {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.forecast-low {
+  color: var(--text-secondary);
+}
+
+.forecast-condition {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.weather-alerts {
+  margin-bottom: 1.5rem;
+}
+
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #d4ebf3;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--accent-yellow);
+}
+
+.alert-icon-small {
+  color: var(--accent-yellow);
+  font-size: 0.9rem;
+}
+
+/* Irrigation Card Specific Styles */
+.irrigation-status {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.irrigation-status-main {
+  margin-bottom: 1.5rem;
+}
+
+.moisture-indicator {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.moisture-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary-green) 0deg 115deg, #e5e7eb 115deg 360deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(12, 169, 118, 0.2);
+  border: 4px solid #ffffff;
+}
+
+.moisture-value {
+  background: white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.moisture-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.moisture-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.moisture-info {
+  flex: 1;
+}
+
+.moisture-range {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.moisture-status-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.irrigation-schedule {
+  margin-bottom: 1.5rem;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.schedule-day {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+}
+
+.schedule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.schedule-day-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.schedule-icon {
+  font-size: 1rem;
+}
+
+.schedule-icon.check { color: var(--primary-green); }
+.schedule-icon.warning { color: var(--accent-yellow); }
+.schedule-icon.irrigate { color: var(--accent-blue); }
+
+.schedule-moisture {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.schedule-status {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.irrigation-info {
+  margin-bottom: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.info-item {
+  padding: 0.75rem;
+  background: var(--bg-secondary);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.info-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Mandi Prices Card Specific Styles */
+.last-updated {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.last-updated strong {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.crop-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.crop-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.best-price-section {
+  margin-bottom: 1.5rem;
+}
+
+.best-price-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.best-price-card {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.best-price-main {
+  margin-bottom: 1rem;
+}
+
+.best-price-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.rupee-icon {
+  font-size: 1.5rem;
+}
+
+.price-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.price-unit {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.best-price-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.best-price-details {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.mandi-prices-list {
+  margin-bottom: 1.5rem;
+}
+
+.mandi-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mandi-item {
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.mandi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.mandi-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mandi-distance {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.distance-icon {
+  font-size: 0.8rem;
+}
+
+.mandi-price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.mandi-price {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.price-icon {
+  font-size: 1rem;
+}
+
+.price-amount {
+  font-weight: 700;
+}
+
+.price-unit {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.mandi-change {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.trend-icon.up { color: var(--primary-green); }
+.trend-icon.down { color: var(--accent-red); }
+
+.change-amount {
+  font-weight: 700;
+}
+
+.change-percent {
+  opacity: 0.8;
+}
+
+.mandi-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Crop Planner Card Specific Styles */
+.season-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.current-season {
+  color: var(--text-secondary);
+}
+
+.season-arrow {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.next-season {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.conditions-summary {
+  margin-bottom: 1.5rem;
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.condition-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+}
+
+.condition-icon {
+  font-size: 1.25rem;
+  color: var(--primary-green);
+}
+
+.condition-info {
+  flex: 1;
+}
+
+.condition-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.condition-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.recommended-crops {
+  margin-bottom: 1.5rem;
+}
+
+.crops-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.crop-item {
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.crop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.crop-name-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.crop-icon {
+  font-size: 1.25rem;
+  color: var(--primary-green);
+}
+
+.crop-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.crop-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.crop-scientific {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.crop-suitability {
+  text-align: center;
+}
+
+.suitability-score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.suitability-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.crop-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.crop-reason {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.crop-timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.timeline-label {
+  color: var(--text-secondary);
+}
+
+.timeline-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.crop-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.metric-label {
+  color: var(--text-secondary);
+}
+
+.metric-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Market Offers Card Specific Styles */
+.offers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.offer-item {
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.buyer-info {
+  flex: 1;
+}
+
+.buyer-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.verified-badge {
+  background: var(--primary-green);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.buyer-location {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.location-icon {
+  font-size: 0.8rem;
+}
+
+.offer-rating {
+  text-align: center;
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.star {
+  font-size: 0.9rem;
+}
+
+.star.filled { color: var(--accent-yellow); }
+.star.half-filled { color: var(--accent-yellow); }
+.star.empty { color: var(--border-color); }
+
+.rating-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.offer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.offer-price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.offer-price {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.rupee-icon {
+  font-size: 1.25rem;
+}
+
+.price-number {
+  font-weight: 700;
+}
+
+.price-unit {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.offer-quantity {
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+}
+
+.offer-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.spec-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.spec-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.offer-highlights {
+  margin-bottom: 1rem;
+}
+
+.offer-highlights h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1.08rem;
+}
+
+.offer-highlights ul {
+  margin: 0;
+}
+
+.offer-highlights li {
+  padding: 0.25rem 0;
+  border-bottom: none;
+  font-size: 1.02rem;
+}
+
+.offer-terms {
+  margin-bottom: 1rem;
+}
+
+.special-terms {
+  font-size: 1.08rem;
+  color: var(--text-primary);
+  background: var(--secondary-green);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--primary-green);
+}
+
+.offer-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+}
+
+.contact-icon {
+  font-size: 0.8rem;
+  color: white;
+}
+
+.contact-buyer-btn {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-buyer-btn:hover {
+  background: var(--primary-green-dark);
+  transform: translateY(-1px);
+}
+
+/* Chatbot Card Specific Styles */
+.chatbot-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.online {
+  background: var(--primary-green);
+}
+
+.status-text {
+  color: var(--text-secondary);
+}
+
+.chatbot-intro {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--secondary-green);
+  border-radius: 0.75rem;
+}
+
+.bot-avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bot-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.intro-text h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.intro-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.quick-questions {
+  margin-bottom: 1.5rem;
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.quick-question-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.quick-question-btn:hover {
+  background: var(--primary-green);
+  color: white;
+  border-color: var(--primary-green);
+}
+
+.chat-interface {
+  margin-bottom: 1.5rem;
+}
+
+.chat-form {
+  margin: 0;
+}
+
+.chat-input-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+}
+
+.chat-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.voice-btn,
+.send-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.voice-btn {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.voice-btn:hover {
+  background: var(--border-color);
+}
+
+.send-btn {
+  background: var(--primary-green);
+  color: white;
+}
+
+.send-btn:hover {
+  background: var(--primary-green-dark);
+}
+
+.chat-response {
+  background: var(--secondary-green);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.response-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.response-icon {
+  color: var(--primary-green);
+  font-size: 1rem;
+}
+
+.response-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.response-content p {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.farming-tips {
+  margin-bottom: 1.5rem;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-secondary);
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.tip-icon {
+  color: var(--primary-green);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.language-support {
+  margin-top: auto;
+}
+
+.language-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.language-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.languages {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.language {
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-card {
+    padding: 1rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-section {
+    padding: 1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .analyze-button {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .npk-grid,
+  .schedule-grid,
+  .conditions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .forecast-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .day-details {
+    padding: 1rem;
+  }
+  
+  .time-slots {
+    flex-direction: column;
+  }
+  
+  .time-slot {
+    text-align: center;
+  }
+  
+  .soil-properties,
+  .info-grid,
+  .crop-timeline,
+  .crop-metrics,
+  .offer-specs {
+    grid-template-columns: 1fr;
+  }
+  
+  .questions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ndvi-section,
+  .moisture-indicator {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .ndvi-circle,
+  .moisture-circle {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .ndvi-value,
+  .moisture-value {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .current-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .current-icon {
+    font-size: 2.5rem;
+  }
+  
+  .current-temp {
+    font-size: 2rem;
+  }
+  
+  .best-price-card {
+    padding: 1rem;
+  }
+  
+  .price-number {
+    font-size: 2rem;
+  }
+  
+  .offer-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .offer-price-section {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  
+  .offer-contact {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* Soil Testing Card Specific Styles */
+.soil-testing-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ca976;
+  position: relative;
+  overflow: hidden;
+}
+
+.soil-testing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0ca976, #10b981, #059669);
+}
+
+.soil-testing-card .card-header {
+  background: linear-gradient(135deg, #0ca976 0%, #059669 100%);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  color: white;
+}
+
+.soil-testing-card .card-title h3 {
+  color: white;
+}
+
+.soil-testing-card .card-icon {
+  color: #d4ebf3;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.soil-testing-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.soil-testing-card .form-section {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #0ca976;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.1);
+}
+
+.soil-testing-card .form-section h4 {
+  color: #0c4a6e;
+  border-bottom: 2px solid #0ca976;
+  padding-bottom: 0.5rem;
+}
+
+.soil-testing-card .analyze-button {
+  background: linear-gradient(135deg, #0ca976 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(12, 169, 118, 0.3);
+}
+
+.soil-testing-card .analyze-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(12, 169, 118, 0.4);
+}
+
+.soil-testing-card .analyze-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.soil-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.soil-testing-card .soil-data {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.soil-testing-card .soil-data h4 {
+  color: #0c4a6e;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.soil-metric {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 0.75rem;
+  border: 2px solid #0ca976;
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.1);
+  transition: all 0.3s ease;
+}
+
+.soil-metric:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 169, 118, 0.2);
+  border-color: #059669;
+}
+
+.metric-icon {
+  font-size: 1.25rem;
+  color: var(--primary-green);
+}
+
+.metric-label {
+  font-weight: 500;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.metric-value {
+  font-weight: 600;
+  color: #0ca976;
+  font-size: 1.1rem;
+}
+
+/* Soil Testing specific recommendations and actions */
+.soil-testing-card .recommendations {
+  background: linear-gradient(135deg, #d4ebf3 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.soil-testing-card .recommendations h4 {
+  color: #92400e;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.soil-testing-card .recommendations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.soil-testing-card .recommendations li {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #f59e0b;
+  color: #78350f;
+  font-weight: 500;
+}
+
+.soil-testing-card .action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.soil-testing-card .refresh-button,
+.soil-testing-card .new-analysis-button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.soil-testing-card .refresh-button:hover,
+.soil-testing-card .new-analysis-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Responsive adjustments for soil testing */
+@media (max-width: 768px) {
+  .soil-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .soil-metric {
+    padding: 0.75rem;
+  }
+  
+  .soil-testing-card .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Map Instructions Styling */
+.map-instructions {
+  background: linear-gradient(135deg, #d4ebf3 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
+
+.map-instructions p {
+  margin: 0;
+  color: #92400e;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.map-instructions strong {
+  color: #78350f;
+}
+
+/* Location text styling */
+.location-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.location-text strong {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Weather recommendations styling */
+.weather-recommendations {
+  margin-bottom: 1.5rem;
+}
+
+.farming-recommendations {
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+/* Thunderstorm and rain expected text styling */
+.thunderstorm-expected-text {
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.rain-expected-text {
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+/* Crop type badge styling */
+.crop-type-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: linear-gradient(to bottom, rgb(224, 242, 247), rgb(167, 217, 237));
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.crop-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.crop-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  text-transform: capitalize;
+  background: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--primary-green);
+}
+
+/* Market Offers Card Specific Styles */
+.market-offers-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.market-offers-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.market-offers-card .card-title h1 {
+  font-size: 3.0rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.market-offers-card .card-icon {
+  font-size: 3.0rem;
+  color: var(--primary-green);
+}
+
+/* Offer Item Interactive Effects */
+.offer-item {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  border: 2px solid #0ca976;
+  background: #ECFAE5;
+  box-shadow: 0 15px 25px -5px rgba(12, 169, 118, 0.3), 
+              0 10px 10px -5px rgba(12, 169, 118, 0.2);
+}
+
+.offer-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(34, 197, 94, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.offer-item:hover::before {
+  opacity: 1;
+}
+
+/* Minimal Design Updates */
+.market-overview {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.market-overview h4 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.market-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Simplified Offer Cards */
+.offer-item {
+  background: #ffffff;
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.buyer-name {
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.buyer-location {
+  color: var(--text-secondary);
+  font-size: 1.08rem;
+}
+
+.offer-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-green);
+}
+
+.offer-specs {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ca976;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.1);
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(12, 169, 118, 0.2);
+  transition: all 0.2s ease;
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
+.spec-item:hover {
+  background: rgba(12, 169, 118, 0.05);
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #0c4a6e;
+  font-size: 1.08rem;
+}
+
+.spec-value {
+  font-weight: 700;
+  color: #0ca976;
+  font-size: 1.08rem;
+}
+
+/* Contact Button Enhancement */
+.contact-buyer-btn {
+  background: linear-gradient(135deg, var(--primary-green), #10b981);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);
+}
+
+.contact-buyer-btn:hover {
+  background: linear-gradient(135deg, #10b981, var(--primary-green));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Market Insights Styling */
+.market-insights {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #0ea5e9;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.market-insights h4 {
+  color: #0c4a6e;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.market-insights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.market-insights li {
+  padding: 0.5rem 0;
+  color: #0c4a6e;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.market-insights li:last-child {
+  border-bottom: none;
+}
+
+.market-insights li::before {
+  content: '💡';
+  margin-right: 0.5rem;
+}
+
+/* Irrigation Card Specific Styles */
+.irrigation-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.irrigation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.irrigation-card .card-title h1 {
+  font-size: 3.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.irrigation-card .card-icon {
+  font-size: 3.1rem;
+  color: var(--primary-green);
+}
+
+/* Irrigation Status Text */
+.irrigation-status .status-text strong {
+  font-weight: 700;
+  color: var(--primary-green);
+  font-size: 1.1rem;
+}
+
+/* Schedule Day Cards */
+.schedule-day {
+  background: #ffffff;
+  border: 2px solid #0ca976;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.schedule-day:hover {
+  background: #ECFAE5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(12, 169, 118, 0.2);
+}
+
+.schedule-day-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.schedule-moisture {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.schedule-status {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Info Grid Items */
+.info-item {
+  background: #ffffff;
+  border: 2px solid #0ca976;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.info-item:hover {
+  background: #ECFAE5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(12, 169, 118, 0.2);
+}
+
+.info-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Increased Text Sizes for Irrigation Card */
+.irrigation-card .moisture-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.irrigation-card .moisture-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.irrigation-card .moisture-range {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.irrigation-card .moisture-status-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.irrigation-card h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.irrigation-card .irrigation-recommendations h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.irrigation-card .irrigation-recommendations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.irrigation-card .irrigation-recommendations li {
+  padding: 0.75rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.irrigation-card .irrigation-recommendations li:last-child {
+  border-bottom: none;
+}
+
+.irrigation-card .irrigation-recommendations li::before {
+  content: '💧';
+  margin-right: 0.5rem;
+}
+
+/* Crop Planner Card Specific Styles */
+.crop-planner-card .card-title h1 {
+  font-size: 3.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crop-planner-card .card-icon {
+  font-size: 3.1rem;
+  color: var(--primary-green);
+}
+
+/* Crop Health Card Specific Styles */
+.crop-health-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #0ca976;
+  position: relative;
+  overflow: hidden;
+}
+
+.crop-health-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0ca976, #10b981, #059669);
+}
+
+.crop-health-card .card-header {
+  background: linear-gradient(135deg, #0ca976 0%, #059669 100%);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  color: white;
+}
+
+.crop-health-card .card-title h3 {
+  font-size: 3.1rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crop-health-card .card-icon {
+  font-size: 3.1rem;
+  color: #d4ebf3;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.crop-health-card .card-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 1.5rem 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Crop Health Form Styling */
+.crop-health-card .form-section {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #0ca976;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.1);
+}
+
+.crop-health-card .form-section h4 {
+  color: #0c4a6e;
+  border-bottom: 2px solid #0ca976;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.crop-health-card .form-group input,
+.crop-health-card .form-group select {
+  border: 2px solid #0ca976;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.crop-health-card .form-group input:focus,
+.crop-health-card .form-group select:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(12, 169, 118, 0.1);
+}
+
+.crop-health-card .analyze-button {
+  background: linear-gradient(135deg, #0ca976 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(12, 169, 118, 0.3);
+  width: 100%;
+}
+
+.crop-health-card .analyze-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(12, 169, 118, 0.4);
+}
+
+.crop-health-card .analyze-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* NDVI Section Styling */
+.crop-health-card .ndvi-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.crop-health-card .ndvi-circle {
+  border: 3px solid #0ca976;
+  box-shadow: 0 8px 25px rgba(12, 169, 118, 0.2);
+}
+
+.crop-health-card .health-message {
+  background: linear-gradient(135deg, #d4ebf3 0%, #fde68a 100%);
+  border: 2px solid #0ca976;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border-left: 4px solid #0ca976;
+}
+
+.crop-health-card .recommendations {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.crop-health-card .recommendations h4 {
+  color: #0c4a6e;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.crop-health-card .recommendations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.crop-health-card .recommendations li {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #0ca976;
+  color: #0c4a6e;
+  font-weight: 500;
+}
+
+/* Crop Disease Card Specific Styles */
+.crop-disease-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #0ca976;
+  position: relative;
+  overflow: hidden;
+}
+
+.crop-disease-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0ca976, #10b981, #059669);
+}
+
+.crop-disease-card .card-header {
+  background: linear-gradient(135deg, #0ca976 0%, #059669 100%);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  color: white;
+}
+
+.crop-disease-card .card-title h3 {
+  font-size: 3.1rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crop-disease-card .card-icon {
+  font-size: 3.1rem;
+  color: #d4ebf3;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.crop-disease-card .card-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 1.5rem 1.5rem;
+  padding: 1.5rem;
+}
+
+.disease-detection-content {
+  text-align: center;
+}
+
+.detection-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.upload-section {
+  margin: 2rem 0;
+}
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #ECFAE5;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ECFAE5;
+  box-shadow: 0 4px 12px rgba(12, 169, 118, 0.3);
+}
+
+.upload-button:hover {
+  background: #d4f4d4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(12, 169, 118, 0.4);
+}
+
+.upload-icon {
+  font-size: 1.25rem;
+}
+
+.analyzing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.loading-spinner {
+  font-size: 2rem;
+  color: #0ca976;
+  animation: spin 1s linear infinite;
+}
+
+.analysis-results {
+  text-align: left;
+}
+
+.uploaded-image-preview {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.crop-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.disease-analysis {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.disease-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.disease-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.disease-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.confidence-badge {
+  background: linear-gradient(135deg, #0ca976, #10b981);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(12, 169, 118, 0.3);
+}
+
+.status-icon {
+  font-size: 1.5rem;
+}
+
+.status-healthy {
+  color: var(--primary-green);
+}
+
+.status-disease {
+  color: var(--accent-red);
+}
+
+.status-unknown {
+  color: var(--accent-yellow);
+}
+
+.status-error {
+  color: #dc2626;
+}
+
+.disease-description {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.disease-details {
+  margin-bottom: 1.5rem;
+}
+
+.disease-details h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.disease-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.disease-details li {
+  background: rgba(12, 169, 118, 0.1);
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #0ca976;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.fertilizer-recommendation {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.fertilizer-recommendation h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0c4a6e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.fertilizer-info p {
+  margin: 0.75rem 0;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.fertilizer-info strong {
+  color: #0c4a6e;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.new-analysis-button {
+  background: #ECFAE5;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.3);
+}
+
+.new-analysis-button:hover {
+  background: #d4f4d4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 169, 118, 0.4);
+}
+
+/* Future Plans Card Specific Styles */
+.future-plans-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #0ca976;
+  position: relative;
+  overflow: hidden;
+}
+
+.future-plans-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0ca976, #10b981, #059669);
+}
+
+.future-plans-card .card-header {
+  background: linear-gradient(135deg, #0ca976 0%, #059669 100%);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  color: white;
+}
+
+.future-plans-card .card-title h3 {
+  font-size: 3.1rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.future-plans-card .card-icon {
+  font-size: 3.1rem;
+  color: #d4ebf3;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.future-plans-card .card-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 1.5rem 1.5rem;
+  padding: 1.5rem;
+}
+
+.future-plans-content {
+  text-align: center;
+}
+
+.plans-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.features-list {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 169, 118, 0.2);
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-icon-container {
+  background: linear-gradient(135deg, #0ca976, #10b981);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.3);
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+}
+
+.emoji-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ca976;
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.2);
+}
+
+.feature-info {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.feature-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  background: rgba(12, 169, 118, 0.1);
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.roadmap-footer {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.roadmap-note {
+  font-size: 1rem;
+  color: #0c4a6e;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Contact Support Card Specific Styles */
+.contact-support-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #0ca976;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-support-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0ca976, #10b981, #059669);
+}
+
+.contact-support-card .card-header {
+  background: linear-gradient(135deg, #0ca976 0%, #059669 100%);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  color: white;
+}
+
+.contact-support-card .card-title h3 {
+  font-size: 3.1rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-support-card .card-icon {
+  font-size: 3.1rem;
+  color: #d4ebf3;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.contact-support-card .card-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 1.5rem 1.5rem;
+  padding: 1.5rem;
+}
+
+.contact-support-content {
+  text-align: center;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-item.clickable {
+  cursor: pointer;
+}
+
+.contact-item.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 169, 118, 0.2);
+  background: rgba(12, 169, 118, 0.05);
+}
+
+.contact-icon-container {
+  background: linear-gradient(135deg, #0ca976, #10b981);
+  color: white;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.3);
+  flex-shrink: 0;
+}
+
+.contact-icon-container .contact-icon {
+  color: white !important;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.contact-details {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0ca976;
+  margin: 0 0 0.25rem 0;
+}
+
+.contact-description-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.support-hours {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ca976;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hours-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0c4a6e;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hours-icon {
+  font-size: 1.25rem;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  border-left: 4px solid #0ca976;
+}
+
+.hours-day {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hours-time {
+  color: #0c4a6e;
+  font-weight: 500;
+}
+
+.quick-actions {
+  text-align: center;
+}
+
+.actions-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button {
+  background: #25d366;
+  color: white;
+}
+
+.whatsapp-button:hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.email-button {
+  background: #0ca976;
+  color: white;
+}
+
+.email-button:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 169, 118, 0.3);
+}
+
+.action-icon {
+  font-size: 1.1rem;
+}
+
+/* Weather Card Specific Styles */
+.weather-card .card-title h1 {
+  font-size: 3.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card .card-icon {
+  font-size: 3.1rem;
+  color: var(--primary-green);
+}
+
+/* Text-to-Speech Button Styles */
+.label-with-tts {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.label-with-tts label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tts-button-label {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.tts-button-label:hover {
+  background: var(--primary-green-dark);
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.3);
+}
+
+.tts-button-label:active {
+  transform: scale(0.95);
+}
+
+.tts-button-label:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(12, 169, 118, 0.3);
+}
+
+/* Legacy styles for input-with-tts (keeping for compatibility) */
+.input-with-tts {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-with-tts input,
+.input-with-tts select {
+  flex: 1;
+  padding-right: 3rem;
+}
+
+.tts-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.tts-button:hover {
+  background: var(--primary-green-dark);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 2px 8px rgba(12, 169, 118, 0.3);
+}
+
+.tts-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.tts-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(12, 169, 118, 0.3);
+}

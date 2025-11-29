@@ -1,0 +1,319 @@
+.government-scheme-card {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.scheme-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.scheme-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.scheme-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.scheme-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.scheme-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.scheme-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.section-icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.subsidies-icon {
+  color: #059669;
+  background: rgba(5, 150, 105, 0.1);
+}
+
+.schemes-icon {
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.insurance-icon {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.1);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.section-content {
+  space-y: 1rem;
+}
+
+.scheme-point {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #e2e8f0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.scheme-point:hover {
+  background: #f1f5f9;
+  border-left-color: #10b981;
+  transform: translateX(5px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.scheme-point:last-child {
+  margin-bottom: 0;
+}
+
+.clickable-point {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #e2e8f0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.clickable-point:hover {
+  background: #e0f2fe;
+  border-left-color: #dc2626;
+  transform: translateX(5px);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.clickable-point:last-child {
+  margin-bottom: 0;
+}
+
+.point-content {
+  flex: 1;
+}
+
+.point-title {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.point-description {
+  color: #64748b;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.point-arrow {
+  color: #10b981;
+  font-size: 0.8rem;
+  margin-right: 0.75rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.point-text {
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.scheme-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-note {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Loading Animation */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 2rem;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #10b981;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .government-scheme-card {
+    padding: 1.5rem;
+  }
+  
+  .scheme-title {
+    font-size: 2rem;
+  }
+  
+  .scheme-sections {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .scheme-section {
+    padding: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .point-text {
+    font-size: 0.9rem;
+  }
+  
+  .point-title {
+    font-size: 0.9rem;
+  }
+  
+  .point-description {
+    font-size: 0.8rem;
+  }
+  
+  .loading-container {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .loading-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .government-scheme-card {
+    padding: 1rem;
+  }
+  
+  .scheme-title {
+    font-size: 1.75rem;
+  }
+  
+  .scheme-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .section-icon {
+    margin-right: 0;
+  }
+  
+  .loading-container {
+    min-height: 250px;
+    padding: 1rem;
+  }
+  
+  .spinner {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .loading-text {
+    font-size: 0.9rem;
+  }
+}
