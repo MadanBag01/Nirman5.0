@@ -1,7 +1,7 @@
 // Maps Configuration
 export const MAPS_CONFIG = {
   // Primary Google Maps API key
-  googleMapsApiKey: 'AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg',
+  googleMapsApiKey: 'AIzaSyB41DRUbKWJHPxaFtNGg',
   
   // Alternative API keys (you can add your own valid keys here)
   alternativeKeys: [
